@@ -1,14 +1,14 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var source = require('vinyl-source-stream');
-var browserify = require('browserify');
-var watchify = require('watchify');
-var reactify = require('reactify');
-var notifier = require('node-notifier');
-var server = require('gulp-server-livereload');
-var concat = require('gulp-concat');
-var sass = require('gulp-sass');
-var watch = require('gulp-watch');
+var gulp = require('gulp'); //The streaming build system
+var gutil = require('gulp-util');//Utility functions for gulp plugins
+var source = require('vinyl-source-stream');//Use conventional text streams at the start of your gulp or vinyl pipelines, making for nicer interoperability with the existing npm stream ecosystem.
+var browserify = require('browserify'); //browserify will recursively analyze all the require() calls in your app in order to build a bundle you can serve up to the browser in a single <script> tag.
+var watchify = require('watchify'); //Update any source file and your browserify bundle will be recompiled on the spot.
+var reactify = require('reactify'); //Browserify transform for JSX (a superset of JS used by React.js)
+var notifier = require('node-notifier'); //A Node.js module for sending notifications on native Mac, Windows (post and pre 8) and Linux (or Growl as fallback)
+var server = require('gulp-server-livereload');//Gulp plugin to run a local webserver with livereload enabled via socket.io
+var concat = require('gulp-concat');//Concatenates files
+var sass = require('gulp-sass');//Sass plugin for Gulp.
+var watch = require('gulp-watch');//File watcher that uses super-fast chokidar and emits vinyl objects.
 
 var notify = function(error) {
   var message = 'In: ';
